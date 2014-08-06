@@ -171,6 +171,10 @@ def train():
     tfl.trainX(x, features)
     tfl.trainY(y, features)
 
+@app.route('/reset', methods=['GET'])
+def reset():
+    tfl.reset()
+
 
 # iter through router json and extract features for each
 def getFeaturesFromRouters(routers):
